@@ -1,0 +1,5 @@
+rootProject.name = 'artifactory-plugin-issue-demo'
+
+include 'demo-api'
+include 'demo-client'
+include 'demo-impl'
