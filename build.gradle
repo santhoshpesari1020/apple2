@@ -22,7 +22,7 @@ allprojects {
 
     repositories {
         maven {
-            url 'http://localhost:8081/artifactory/libs-snapshot-local/'
+            url 'http://localhost:8082/artifactory/libs-snapshot-local/'
             credentials {
                 username = 'admin'
                 password = 'password'
