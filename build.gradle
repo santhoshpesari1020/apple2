@@ -20,13 +20,4 @@ allprojects {
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
-    repositories {
-        maven {
-            url 'http://localhost:8082/artifactory/libs-snapshot-local/'
-            credentials {
-                username = 'admin'
-                password = 'password'
-            }
-        }
-    }
 }
