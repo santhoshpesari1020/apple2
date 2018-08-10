@@ -11,6 +11,7 @@ buildscript {
 
 allprojects {
     apply plugin: 'java-library'
+    apply plugin: 'maven'
     //apply plugin: 'maven-publish'
     //apply plugin: 'com.jfrog.artifactory'
 
