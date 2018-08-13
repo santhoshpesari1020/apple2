@@ -21,11 +21,10 @@ allprojects {
     targetCompatibility = 1.8
 
     publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                from components.java
-            }
-        }
+         publications {
+             name(MavenPublication) {
+             }
+         }
     }
 
     artifactoryPublish {
