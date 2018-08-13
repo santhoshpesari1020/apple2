@@ -27,8 +27,8 @@ allprojects {
          }
     }
 
-    artifactory {
-         publications('mavenJava')
+    artifactoryPublish {
+         publications('publications.apple.demo')
     }
 
 }
