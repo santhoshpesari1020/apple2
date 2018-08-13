@@ -28,7 +28,7 @@ allprojects {
     }
 
     artifactoryPublish {
-         publications('publications.apple.demo')
+         publications(publications.apple.demo)
     }
 
 }
