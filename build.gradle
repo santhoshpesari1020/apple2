@@ -28,7 +28,7 @@ allprojects {
     }
 
     artifactoryPublish {
-         publications(publishing.apple.demo)
+         publications(MavenPublication)
     }
 
 }
