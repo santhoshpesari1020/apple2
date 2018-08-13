@@ -22,13 +22,13 @@ allprojects {
 
     publishing {
          publications {
-             name(MavenPublication) {
+             mavenJava(MavenPublication) {
              }
          }
     }
 
     artifactoryPublish {
-         publications(publications.apple.demo)
+         publications(publishing.publications.mavenJava)
     }
 
 }
