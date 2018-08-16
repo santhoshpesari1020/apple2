@@ -3,7 +3,7 @@ apply plugin: 'distribution'
 
 dependencies {
     compile 'com.art.plugin.test:demo-client:' + version
-    //compile project(':demo-client')
+    compile project(':demo-client')
 }
 
 mainClassName = 'com.test.Demo'
