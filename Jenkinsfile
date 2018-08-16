@@ -40,7 +40,7 @@ pipeline {
                     rtGradle.deployer.deployMavenDescriptors = true
                     rtGradle.deployer.deployIvyDescriptors = false
 
-                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: '--version --warning-mode all'
+                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: '--warning-mode all'
                     def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
                     def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
                     jarServer.publishBuildInfo buildInfo1
