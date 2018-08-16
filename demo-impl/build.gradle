@@ -2,7 +2,7 @@ apply plugin: 'application'
 apply plugin: 'distribution'
 
 dependencies {
-    compile 'com.art.plugin.test:demo-client:' + version
+    //compile 'com.art.plugin.test:demo-client:' + version
     compile project(':demo-client')
 }
 
