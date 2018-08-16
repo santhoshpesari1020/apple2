@@ -1,5 +1,5 @@
 rootProject.name = 'artifactory-plugin-issue-demo'
-enableFeaturePreview('STABLE_PUBLISHING')
+
 include 'demo-api'
 include 'demo-client'
 include 'demo-impl'
