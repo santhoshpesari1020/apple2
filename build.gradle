@@ -24,7 +24,6 @@ allprojects {
          publications {
              mavenJava(MavenPublication) {
                 from components.java
-                artifactId = com.test
              }
          }
     }
