@@ -10,7 +10,8 @@ buildscript {
 }
 
 allprojects {
-
+    
+    apply plugin: 'java'
     apply plugin: 'maven-publish'
     
     group = 'com.test'
