@@ -13,7 +13,8 @@ allprojects {
 
     apply plugin: 'java'
     apply plugin: 'maven-publish'
-
+    apply plugin: 'com.jfrog.artifactory'
+    
     group = 'com.test'
     version = 'art-plugin-runtimeonly-SNAPSHOT'
     sourceCompatibility = 1.8
