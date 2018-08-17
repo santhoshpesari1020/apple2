@@ -29,5 +29,6 @@ allprojects {
     }
     artifactoryPublish {
          publications(publishing.publications.mavenJava)
+         publishPom = true
     }
 }
