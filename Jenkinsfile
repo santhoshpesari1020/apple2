@@ -33,7 +33,7 @@ pipeline {
                     jarServer.password = 'password'
                     def rtGradle = Artifactory.newGradleBuild()
 
-                    //rtGradle.usesPlugin = true
+                    rtGradle.usesPlugin = true
                     rtGradle.tool = 'gradle'
                     rtGradle.resolver server: jarServer, repo: 'libs-snapshot-local'
                     rtGradle.deployer server: jarServer, repo: 'libs-snapshot-local'
