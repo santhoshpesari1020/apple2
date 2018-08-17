@@ -11,8 +11,8 @@ buildscript {
 
 allprojects {
     
-    apply plugin: 'java'
     apply plugin: 'maven-publish'
+    apply plugin: 'com.jfrog.artifactory'
     
     group = 'com.test'
     version = 'art-plugin-runtimeonly-SNAPSHOT'
