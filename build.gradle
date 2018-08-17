@@ -23,11 +23,10 @@ allprojects {
     publishing {
          publications {
              mavenJava(MavenPublication) {
-                from component.java
              }
          }
     }
     artifactoryPublish {
-         publications(mavenJava)
+         publications(publishing.publications.mavenJava)
     }
 }
