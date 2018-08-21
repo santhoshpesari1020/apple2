@@ -27,7 +27,8 @@ allprojects {
              }
          }
     }
-}
-artifactoryPublish {
-     publications(publishing.publications.mavenJava)
+    artifactoryPublish {
+        publications(publishing.publications.mavenJava)
     }
+}
+
