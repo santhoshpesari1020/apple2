@@ -40,23 +40,23 @@ pipeline {
                     rtGradle.deployer.deployMavenDescriptors = true
                     rtGradle.deployer.deployIvyDescriptors = false
 
-                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: '--warning-mode all'
-                    def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
-                    def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
-                    jarServer.publishBuildInfo buildInfo1
-                    jarServer.publishBuildInfo buildInfo2
+                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+                    //def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
+                    //def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
+                    //jarServer.publishBuildInfo buildInfo1
+                    //jarServer.publishBuildInfo buildInfo2
                 }
             }
         }
 
-        stage('run') {
-            steps {
-                script {
-                    sh 'gradle :demo-impl:run'
-                }
-            }
-        }
-    }
+        //stage('run') {
+          //  steps {
+            //    script {
+              //      sh 'gradle :demo-impl:run'
+                //}
+            //}
+        //}
+    //}
 
     post {
         failure {
