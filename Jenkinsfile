@@ -40,7 +40,7 @@ pipeline {
                     rtGradle.deployer.deployMavenDescriptors = true
                     rtGradle.deployer.deployIvyDescriptors = false
 
-                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+                    rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean generatePomFileFormavenJavaPublication'
                     //def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
                     //def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
                     //jarServer.publishBuildInfo buildInfo1
