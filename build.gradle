@@ -28,7 +28,6 @@ allprojects {
          }
     }
     artifactoryPublish {
-        contextUrl = 'http://localhost:8082/artifactory/'
         publications(publishing.publications.mavenJava)
     }
 }
