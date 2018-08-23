@@ -22,8 +22,10 @@ allprojects {
     
     publishing {
          publications {
+            afterEvaluate {
              mavenJava(MavenPublication) {
              from components.java
+                }
              }
          }
     }
