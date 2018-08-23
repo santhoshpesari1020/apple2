@@ -25,14 +25,14 @@ allprojects {
        //      mavenJava(MavenPublication) {
          //    from components.java
            //  }
-         //}
+           //}
     //}
-  artifactory {
-   publish {
-      defaults {
-          publications('mavenJava')
-          }
-      }
-   }
+artifactory 
+    publish {
+        defaults 
+            publications('mavenJava')
+            }
+        }
+    }
 }
 
