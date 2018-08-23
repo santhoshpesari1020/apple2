@@ -27,10 +27,12 @@ allprojects {
            //  }
          //}
     //}
-    artifactoryPublish {
-        afterEvaluate {
-        publications(publishing.publications.mavenJava)
-        }
-    }
+  artifactory {
+   publish {
+      defaults {
+          publications('mavenJava')
+          }
+      }
+   }
 }
 
