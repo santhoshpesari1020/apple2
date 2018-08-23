@@ -27,9 +27,9 @@ allprojects {
            //  }
            //}
     //}
-    artifactory 
+    artifactory {
         publish {
-            defaults 
+            defaults {
                 publications('mavenJava')
                 }
             }
