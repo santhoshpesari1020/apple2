@@ -22,15 +22,15 @@ allprojects {
     
     publishing {
          publications {
-            afterEvaluate {
              mavenJava(MavenPublication) {
              from components.java
-                }
              }
          }
     }
     artifactoryPublish {
+        afterEvaluate {
         publications(publishing.publications.mavenJava)
+        }
     }
 }
 
