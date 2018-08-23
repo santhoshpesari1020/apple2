@@ -27,12 +27,12 @@ allprojects {
            //  }
            //}
     //}
-artifactory 
-    publish {
-        defaults 
-            publications('mavenJava')
+    artifactory 
+        publish {
+            defaults 
+                publications('mavenJava')
+                }
             }
         }
-    }
 }
 
