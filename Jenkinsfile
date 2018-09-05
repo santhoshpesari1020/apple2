@@ -41,10 +41,10 @@ pipeline {
                     rtGradle.deployer.deployIvyDescriptors = false
 
                     rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
-                    //def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
-                    //def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
-                    //jarServer.publishBuildInfo buildInfo1
-                    //jarServer.publishBuildInfo buildInfo2
+                    def buildInfo1 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-api:artifactoryPublish :demo-client:artifactoryPublish'
+                    def buildInfo2 = rtGradle.run rootDir: "./", buildFile: 'build.gradle', tasks: ':demo-impl:artifactoryPublish'
+                    jarServer.publishBuildInfo buildInfo1
+                    jarServer.publishBuildInfo buildInfo2
                 }
             }
         }
