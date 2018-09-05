@@ -49,13 +49,6 @@ pipeline {
             }
         }
 
-        //stage('run') {
-          //  steps {
-            //    script {
-              //      sh 'gradle :demo-impl:run'
-                //}
-            //}
-        //}
     }
 
     post {
