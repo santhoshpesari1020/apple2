@@ -51,11 +51,4 @@ pipeline {
 
     }
 
-    post {
-        failure {
-            emailext attachLog: true, body: """FAILED: Job Check console output at '${env.BUILD_URL}';""",
-                    recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
-        }
-    }
-
 }
