@@ -18,7 +18,6 @@ pipeline {
 
             steps {
                 script {
-                    sh 'whoami'
                     sh 'sudo adduser $USER docker'
                     sh 'gradle clean'
                     sh 'gradle :demo-api:build'
