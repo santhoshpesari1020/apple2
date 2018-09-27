@@ -18,7 +18,6 @@ pipeline {
 
             steps {
                 script {
-                    sh 'sudo adduser $USER docker'
                     sh 'gradle clean'
                     sh 'gradle :demo-api:build'
                     sh 'gradle :demo-client:build'
