@@ -28,7 +28,7 @@ pipeline {
         stage('publish') {
             steps {
                 script {
-                    def jarServer = Artifactory.newServer url: 'http://10.138.0.182:12025/artifactory/'
+                    def jarServer = Artifactory.newServer url: 'http://10.138.0.3:12025/artifactory/'
                     jarServer.username = 'admin'
                     jarServer.password = 'password'
                     def rtGradle = Artifactory.newGradleBuild()
