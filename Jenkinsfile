@@ -28,15 +28,15 @@ pipeline {
         stage('publish') {
             steps {
                 script {
-                    def jarServer = Artifactory.newServer url: 'http://10.128.0.182:8081/artifactory/'
+                    def jarServer = Artifactory.newServer url: 'http://10.138.0.182:12025/artifactory/'
                     jarServer.username = 'admin'
                     jarServer.password = 'password'
                     def rtGradle = Artifactory.newGradleBuild()
 
                     rtGradle.usesPlugin = true
                     rtGradle.tool = 'gradle'
-                    rtGradle.resolver server: jarServer, repo: 'libs-snapshot-local'
-                    rtGradle.deployer server: jarServer, repo: 'libs-snapshot-local'
+                    rtGradle.resolver server: jarServer, repo: 'gradle-dev-local'
+                    rtGradle.deployer server: jarServer, repo: 'gradle-release-local'
                     rtGradle.deployer.deployMavenDescriptors = true
                     rtGradle.deployer.deployIvyDescriptors = false
 
